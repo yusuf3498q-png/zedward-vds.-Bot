@@ -7,8 +7,10 @@ import signal
 from threading import Lock
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-API_KEY = '9280190146:AAEAVwMGyTy5nqMpHNOIHN1Ra-W8pi8mogQ' #botfather tokeni girin
-ADMIN_ID = 8940836716  #telegram idinizi girin
+# Token ve ID artık Render'daki Environment (Ortam Değişkenleri) kısmından çekilecek
+API_KEY = os.getenv("API_KEY") 
+ADMIN_ID = int(os.getenv("ADMIN_ID")) 
+
 SCRIPT_FOLDER = 'user_scripts'
 DATA_FILE = 'user_data.json'
 
